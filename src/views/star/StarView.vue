@@ -11,10 +11,10 @@ const init = () => {
     let distance: number = starsDistance + Math.random() * 300;
     ref.style.transformOrigin = `0 0 ${distance}px`;
     ref.style.transform = `
-        translate3d(0,0,-${distance}px)
-        rotateX(${Math.random() * -50}deg)
-        rotateY(${Math.random() * 360}deg)
-        scale(${speed},${speed})
+      translate3d(0,0,-${distance}px)
+      rotateX(${Math.random() * -50}deg)
+      rotateY(${Math.random() * 360}deg)
+      scale(${speed}, ${speed})
     `;
   });
 };
