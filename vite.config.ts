@@ -9,6 +9,7 @@ export default defineConfig({
       extensions: ['vue', 'md', 'ts'],
       dirs: [
         { dir: 'src/views/index', baseRoute: 'index' },
+        { dir: 'src/views/use', baseRoute: 'use' },
         { dir: 'src/views/star', baseRoute: 'star' }
       ]
     })
