@@ -16,7 +16,7 @@ onMounted(() => {
 
 <template>
   <div class="loading-container">
-    <div class="container">
+    <div class="content">
       <h1>Website is Loaded 😉</h1>
     </div>
 
@@ -32,6 +32,11 @@ onMounted(() => {
 </template>
 
 <style scoped>
+:root {
+  color-scheme: light dark;
+  background: #ecf0f1;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -47,21 +52,20 @@ onMounted(() => {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #ecf0f1;
 }
 
 .content h1 {
-  color: #193848;
+  color: aqua;
   text-align: center;
-  text-transform: uppercase;
-  font: 900 2.5rem 'Montserrat';
+  /* text-transform: uppercase; */
+  font: 900 2rem 'Monaco, Menlo, Consolas, monospace';
 }
 
 .loader {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #ecf0f1;
+  background: #242424;
 }
 
 .loader .loader-inner {
@@ -70,11 +74,14 @@ onMounted(() => {
   left: 50%;
   width: 100px;
   height: 100px;
+  /* background: #000; */
   transform: translate(-50%, -50%);
 }
 
 .loader span {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 30%;
   height: 30%;
   border-radius: 50%;
@@ -116,6 +123,20 @@ onMounted(() => {
 
   75% {
     transform: translate(0, 70px);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    background: #242424;
+  }
+
+  .content h1 {
+    color: #193848;
+  }
+
+  .loader {
+    background: #242424;
   }
 }
 </style>
