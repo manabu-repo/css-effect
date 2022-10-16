@@ -1,31 +1,31 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
+import { onMounted, ref } from 'vue'
 
-const starRef = ref(null);
-const starsCount = 800;
-const starsDistance = 800;
+const starRef = ref()
+const starsCount = 800
+const starsDistance = 800
 
 const init = () => {
-  starRef.value.forEach(ref => {
-    let speed: number = 0.2 + Math.random() * 1;
-    let distance: number = starsDistance + Math.random() * 300;
-    ref.style.transformOrigin = `0 0 ${distance}px`;
+  starRef.value.forEach((ref: any) => {
+    const speed: number = 0.2 + Math.random() * 1
+    const distance: number = starsDistance + Math.random() * 300
+    ref.style.transformOrigin = `0 0 ${distance}px`
     ref.style.transform = `
       translate3d(0,0,-${distance}px)
       rotateX(${Math.random() * -50}deg)
       rotateY(${Math.random() * 360}deg)
       scale(${speed}, ${speed})
-    `;
-  });
-};
+    `
+  })
+}
 
-onMounted(() => init());
+onMounted(() => init())
 </script>
 
 <template>
   <div class="container">
     <div class="stars">
-      <div v-for="(star, index) of starsCount" :key="index" class="star" ref="starRef"></div>
+      <div v-for="(star, index) of starsCount" :key="index" ref="starRef" class="star" />
     </div>
   </div>
 </template>

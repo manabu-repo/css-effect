@@ -2,8 +2,12 @@
 
 <template>
   <div class="container">
-    <router-link to="/use">🌰 Use</router-link>
-    <router-link to="/star">⭐️ Star</router-link>
+    <router-link to="/use">
+      🌰 Use
+    </router-link>
+    <router-link to="/star">
+      ⭐️ Star
+    </router-link>
   </div>
 </template>
 
