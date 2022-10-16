@@ -6,11 +6,12 @@ export default defineConfig({
   plugins: [
     vue(),
     pages({
-      extensions: ['vue', 'md', 'ts'],
+      extensions: ['vue', 'ts'],
       dirs: [
-        { dir: 'src/views/index', baseRoute: 'index' },
-        { dir: 'src/views/use', baseRoute: 'use' },
-        { dir: 'src/views/star', baseRoute: 'star' },
+        { dir: 'src/views', baseRoute: '/' },
+        // { dir: 'src/views/index', baseRoute: 'index' },
+        // { dir: 'src/views/use', baseRoute: 'use' },
+        // { dir: 'src/views/star', baseRoute: 'star' },
       ],
     }),
   ],

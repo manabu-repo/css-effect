@@ -1,13 +1,23 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const list = [{
+  to: '/use',
+  label: '🌰 Use',
+}, {
+  to: '/star',
+  label: '⭐️ Star',
+}, {
+  to: '/loading/loading',
+  label: '🔆 Loading',
+}]
+</script>
 
 <template>
   <div class="container">
-    <router-link to="/use">
-      🌰 Use
-    </router-link>
-    <router-link to="/star">
-      ⭐️ Star
-    </router-link>
+    <template v-for="use of list" :key="use.to">
+      <router-link :to="use.to">
+        {{ use.label }}
+      </router-link>
+    </template>
   </div>
 </template>
 
