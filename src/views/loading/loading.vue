@@ -20,14 +20,14 @@ onMounted(() => {
       <h1>Website is Loaded 😉</h1>
     </div>
 
-      <div class="loader">
-        <div class="loader-inner">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+    <div class="loader">
+      <div class="loader-inner">
+        <span />
+        <span />
+        <span />
+        <span />
       </div>
+    </div>
   </div>
 </template>
 
@@ -65,7 +65,7 @@ onMounted(() => {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #242424;
+  background: #fafafa;
 }
 
 .loader .loader-inner {
