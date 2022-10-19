@@ -8,6 +8,9 @@ const list = [{
 }, {
   to: '/loading/loading',
   label: '🔆 Loading',
+}, {
+  to: '/border/cut',
+  label: '✂️ BorderCut',
 }]
 </script>
 
