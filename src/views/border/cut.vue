@@ -31,6 +31,11 @@
       <!-- 锥形渐变 固定角度切角 -->
       <div>conic-gradient</div>
     </div>
+
+    <div class="content">
+      <div class="perspective" />
+      <div>perspective</div>
+    </div>
   </div>
 </template>
 
@@ -86,5 +91,12 @@
   width: 3rem;
   height: 5rem;
   background: conic-gradient(at 100% 0, #b89dff 250deg, transparent 0);
+}
+
+.perspective {
+  width: 2.5rem;
+  height: 3rem;
+  background: yellow;
+  transform: perspective(0.2em) rotateY(3deg);
 }
 </style>
