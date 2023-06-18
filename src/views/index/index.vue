@@ -1,17 +1,5 @@
 <script setup lang="ts">
-const list = [{
-  to: '/use',
-  label: '🌰 Use',
-}, {
-  to: '/star',
-  label: '⭐️ Star',
-}, {
-  to: '/loading/loading',
-  label: '🔆 Loading',
-}, {
-  to: '/border/cut',
-  label: '✂️ BorderCut',
-}]
+import { list } from './config'
 </script>
 
 <template>
