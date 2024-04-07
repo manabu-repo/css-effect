@@ -10,6 +10,9 @@ export const list = [{
 }, {
   to: '/border/cut',
   label: '✂️ BorderCut',
+}, {
+  to: '/transform',
+  label: '🔍 Transform',
 }]
 
 export default { list }
