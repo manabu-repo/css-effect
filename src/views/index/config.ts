@@ -12,7 +12,10 @@ export const list = [{
   label: '✂️ BorderCut',
 }, {
   to: '/transform',
-  label: '🔍 Transform',
+  label: '🌈 Transform',
+}, {
+  to: '/blur',
+  label: '🔍 Blur',
 }]
 
 export default { list }

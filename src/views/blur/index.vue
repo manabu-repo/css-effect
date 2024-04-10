@@ -1,17 +1,26 @@
 <script setup lang="ts">
-
+import treeIcon from '@/assets/tree.jpg'
+import catIcon from '@/assets/cat.jpg'
 </script>
 
 <template>
-  <div class="transform-view">
-    <div class="rising-tide content">
-      <div class="water" />
+  <div class="blur-view">
+    <div class="blur-effect content">
+      <img :src="treeIcon">
+    </div>
+
+    <div class="mask-effect content">
+      <img :src="catIcon">
+    </div>
+
+    <div class="overlay-effect content">
+      <img :src="catIcon">
     </div>
   </div>
 </template>
 
 <style scoped>
-.transform-view {
+.blur-view {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,33 +28,6 @@
 
 .content {
   margin: 0 2rem;
-}
-
-.rising-tide {
-  height: 5rem;
-  width: 3rem;
-  background-color: blueviolet;
-  position: relative;
-  overflow: hidden;
-}
-
-.rising-tide .water {
-  height: 100%;
-  width: 100%;
-  background-color: aquamarine;
-  position: absolute;
-  bottom: -100%;
-  animation: riseTide 0.5s infinite alternate ease-in-out;
-}
-
-@keyframes riseTide {
-  0% {
-    bottom: -100%;
-  }
-
-  100% {
-    bottom: 0;
-  }
 }
 
 .blur-effect {
