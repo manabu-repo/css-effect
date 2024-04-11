@@ -16,6 +16,9 @@ export const list = [{
 }, {
   to: '/blur',
   label: '🔍 Blur',
+}, {
+  to: '/theme',
+  label: '🎨 Theme',
 }]
 
 export default { list }
