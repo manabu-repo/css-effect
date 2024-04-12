@@ -7,6 +7,12 @@
     <div class="rising-tide content">
       <div class="water" />
     </div>
+
+    <div class="content">
+      <div class="loading">
+        <div class="change-box" />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -18,7 +24,7 @@
 }
 
 .content {
-  margin: 0 2rem;
+  margin: 0 10rem;
 }
 
 .rising-tide {
@@ -48,36 +54,29 @@
   }
 }
 
-.blur-effect {
-  height: 10rem;
+.loading {
   width: 10rem;
-  overflow: hidden;
-  filter: blur(1.5px);
-  opacity: 0.5;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.mask-effect {
-  height: 10rem;
-  width: 10rem;
-  overflow: hidden;
-  position: relative;
+.change-box {
+  width: 4rem;
+  height: 4rem;
+  background-color: pink;
+  animation-name: change;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
 }
 
-.mask-effect img {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  filter: blur(3px);
-  opacity: 0.5;
-}
-
-.overlay-effect {
-  height: 10rem;
-  width: 10rem;
-  overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 999;
+@keyframes change {
+  50% {
+    width: 7.5rem;
+    height: 7.5rem;
+    border-radius: 50%;
+    background-color: skyblue;
+  }
 }
 </style>
