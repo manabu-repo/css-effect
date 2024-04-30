@@ -19,6 +19,9 @@ export const list = [{
 }, {
   to: '/theme',
   label: '🎨 Theme',
+}, {
+  to: '/position',
+  label: '📌 Position',
 }]
 
 export default { list }
