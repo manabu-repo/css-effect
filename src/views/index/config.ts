@@ -22,6 +22,9 @@ export const list = [{
 }, {
   to: '/position',
   label: '📌 Position',
+}, {
+  to: '/flow',
+  label: '🌊 Flow',
 }]
 
 export default { list }
