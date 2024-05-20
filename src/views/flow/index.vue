@@ -5,6 +5,8 @@
     <div class="square1" />
     <div class="square2" />
     <div class="square3" />
+
+    <div class="loading" />
   </div>
 </template>
 
@@ -31,10 +33,12 @@
     border-color: #f00;
     border-width: 2px;
   }
+
   50% {
     border-color: #00f;
     border-width: 4px;
   }
+
   100% {
     border-color: #0f0;
     border-width: 2px;
@@ -53,9 +57,11 @@
   0% {
     box-shadow: 0 0 0 0 #f00;
   }
+
   50% {
     box-shadow: 0 0 0 4px #f00;
   }
+
   100% {
     box-shadow: 0 0 0 0 #f00;
   }
@@ -72,31 +78,65 @@
 @keyframes flowBorders3 {
   0% {
     box-shadow:
-      -2px 0 0 0 #f00, /* 左边框 */
-      2px 0 0 0 transparent, /* 右边框 */
-      0 -2px 0 0 transparent, /* 上边框 */
-      0 2px 0 0 transparent; /* 下边框 */
+      -2px 0 0 0 #f00,
+      /* 左边框 */
+      2px 0 0 0 transparent,
+      /* 右边框 */
+      0 -2px 0 0 transparent,
+      /* 上边框 */
+      0 2px 0 0 transparent;
+    /* 下边框 */
   }
+
   25% {
     box-shadow:
-      -2px 0 0 0 transparent, /* 左边框 */
-      2px 0 0 0 #f00, /* 右边框 */
-      0 -2px 0 0 transparent, /* 上边框 */
-      0 2px 0 0 transparent; /* 下边框 */
+      -2px 0 0 0 transparent,
+      /* 左边框 */
+      2px 0 0 0 #f00,
+      /* 右边框 */
+      0 -2px 0 0 transparent,
+      /* 上边框 */
+      0 2px 0 0 transparent;
+    /* 下边框 */
   }
+
   50% {
     box-shadow:
-      -2px 0 0 0 transparent, /* 左边框 */
-      2px 0 0 0 transparent, /* 右边框 */
-      0 -2px 0 0 #f00, /* 上边框 */
-      0 2px 0 0 transparent; /* 下边框 */
+      -2px 0 0 0 transparent,
+      /* 左边框 */
+      2px 0 0 0 transparent,
+      /* 右边框 */
+      0 -2px 0 0 #f00,
+      /* 上边框 */
+      0 2px 0 0 transparent;
+    /* 下边框 */
   }
+
   75% {
     box-shadow:
-      -2px 0 0 0 transparent, /* 左边框 */
-      2px 0 0 0 transparent, /* 右边框 */
-      0 -2px 0 0 transparent, /* 上边框 */
-      0 2px 0 0 #f00; /* 下边框 */
+      -2px 0 0 0 transparent,
+      /* 左边框 */
+      2px 0 0 0 transparent,
+      /* 右边框 */
+      0 -2px 0 0 transparent,
+      /* 上边框 */
+      0 2px 0 0 #f00;
+    /* 下边框 */
+  }
+}
+
+.loading {
+  width: 32px;
+  height: 32px;
+  border: 4px solid rgba(0, 0, 0, 0.2);
+  border-top-color: #000000;
+  border-radius: 50%;
+  animation: loading 1s linear infinite;
+}
+
+@keyframes loading {
+  to {
+    transform: rotate(360deg);
   }
 }
 </style>
